@@ -42,7 +42,7 @@ MainTabSection:NewButton("Set game invisible", "Best for multiple accounts", fun
     end
 end)
 
-Section:NewButton("ButtonText", "ButtonInfo", function()
+MainTabSection:NewButton("ButtonText", "ButtonInfo", function()
     print("Clicked")
 end)
 
@@ -59,4 +59,3 @@ end)
 OptionsTabSection:NewSlider("Set Jump Power", "Set your player Jump Power. 50 default", 100, 0, function(s) -- 100 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
-
