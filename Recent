@@ -44,9 +44,9 @@ end)
 
 MainTabSection:NewToggle("Fly Toggle", "Does NOT bypass anti-cheats.", function(state)
     if state then
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/PhoenixAceVFX/Roblox-Scripts/master/FE%20Fly.lua"),false))()
+        loadstring(game:HttpGet(("https://pastebin.com/raw/snDPg81C"),false))()
     else
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/PhoenixAceVFX/Roblox-Scripts/master/FE%20Fly.lua"),true))()
+        loadstring(game:HttpGet(("https://pastebin.com/raw/snDPg81C"),true))()
     end
 end)
 
