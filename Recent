@@ -42,13 +42,7 @@ MainTabSection:NewButton("Set game invisible", "Best for multiple accounts", fun
     end
 end)
 
-MainTabSection:NewToggle("Fly Toggle", "Does NOT bypass anti-cheats.", function(state)
-    if state then
-        loadstring(game:HttpGet(("https://pastebin.com/raw/snDPg81C"),false))()
-    else
-        loadstring(game:HttpGet(("https://pastebin.com/raw/snDPg81C"),true))()
-    end
-end)
+
 
 --//Options Tab Buttons\\--
 
