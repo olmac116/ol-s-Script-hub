@@ -43,7 +43,7 @@ MainTabSection:NewButton("Set game invisible", "Best for multiple accounts", fun
 end)
 
 MainTabSection:NewButton("ButtonText", "ButtonInfo", function()
-    print("Clicked")
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/PhoenixAceVFX/Roblox-Scripts/master/FE%20Fly.lua"),true))()
 end)
 
 --//Options Tab Buttons\\--
