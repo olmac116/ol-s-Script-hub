@@ -42,8 +42,12 @@ MainTabSection:NewButton("Set game invisible", "Best for multiple accounts", fun
     end
 end)
 
-MainTabSection:NewButton("ButtonText", "ButtonInfo", function()
-    loadstring(game:HttpGet(("https://raw.githubusercontent.com/PhoenixAceVFX/Roblox-Scripts/master/FE%20Fly.lua"),true))()
+MainTabSection:NewToggle("Fly Toggle", "Does NOT bypass anti-cheats.", function(state)
+    if state then
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/PhoenixAceVFX/Roblox-Scripts/master/FE%20Fly.lua"),false))()
+    else
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/PhoenixAceVFX/Roblox-Scripts/master/FE%20Fly.lua"),true))()
+    end
 end)
 
 --//Options Tab Buttons\\--
