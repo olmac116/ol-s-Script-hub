@@ -38,11 +38,31 @@ MainTabSection:NewButton("Set game invisible", "Best for multiple accounts", fun
     for i, v in pairs(game.Workspace:GetDescendants()) do
         if v:IsA("Part") then
             v.Transparency = 1
+            v.Texture.Visible = false
+            v.Decal.Visible = false
         end
     end
 end)
 
-
+MainTabSection:NewToggle("ToggleText", "ToggleInfo", function(state)
+    if state then
+        for i, v in pairs(game.Workspace:GetDescendants()) do
+            if v:IsA("Part") then
+                v.Transparency = 1
+                v.Texture.Visible = false
+                v.Decal.Visible = false
+            end
+        end
+    else
+        for i, v in pairs(game.Workspace:GetDescendants()) do
+            if v:IsA("Part") then
+                v.Transparency = 0
+                v.Texture.Visible = true
+                v.Decal.Visible = true
+            end
+        end
+    end
+end)
 
 --//Options Tab Buttons\\--
 
