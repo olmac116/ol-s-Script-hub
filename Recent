@@ -24,8 +24,8 @@ UpdatesSection:NewButton("Print Update Log", "Press F9 to open console", functio
     game.StarterGui:SetCore("SendNotification", {
     Title = "Notification"; -- the title (ofc)
     Text = "Press F9 To open console, or type (in chat): '/console'."; -- what the text says (ofc)
-    Icon = "rbxassetid://57254792"; -- the image if u want. 
-    Duration = 5; -- how long the notification should in secounds
+    Icon = "rbxassetid://10898202780"; -- the image if u want. 
+    Duration = 10; -- how long the notification should in secounds
     })
     warn("--UPDATE LOG--")
     warn("[UPDATE LOG HERE]")
