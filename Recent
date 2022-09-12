@@ -9,32 +9,32 @@ local Window = Library.CreateLib("ol's Hub", "GrapeTheme")
 --//Tabs\\--
 
 local UpdatesTab = Window:NewTab("--UPDATES--")
-local MainTab = Window:NewTab("Main")
+local UniversalTab = Window:NewTab("Universal")
 local OptionsTab = Window:NewTab("Options")
 
 --//Sections\\--
 
-local UpdatesTabSection = UpdatesTab:NewSection("--UPDATES--")
-local MainTabSection = MainTab:NewSection("Main")
-local OptionsTabSection = OptionsTab:NewSection("Options")
+local UpdatesSection = UpdatesTab:NewSection("--UPDATES--")
+local UniversalSection = UniversalTab:NewSection("Universal")
+local OptionsSection = OptionsTab:NewSection("Options")
 
 --//Update Tab Buttons\\--
 
-UpdatesTabSection:NewButton("Print Update Log", "Press F9 to open console", function()
+UpdatesSection:NewButton("Print Update Log", "Press F9 to open console", function()
     warn("--UPDATE LOG--")
     warn("[UPDATE LOG HERE]")
 end)
 
 --//Main Tab Buttons\\--
 
-MainTabSection:NewButton("Launch Infinite Yield", "Launch Infinite Yield Admin", function()
+UniversalSection:NewButton("Launch Infinite Yield", "Launch Infinite Yield Admin", function()
     print("Launching Infinite Yield Admin. Please wait")
     wait(math.random(1,5))
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
     print("Infinite Yield Admin Loaded successfully!")
 end)
 
-MainTabSection:NewToggle("Invisible map", "Best for multiple account launch", function(state)
+UniversalSection:NewToggle("Invisible map", "Best for multiple account launch", function(state)
     if state then
         for i, v in pairs(game.Workspace:GetDescendants()) do
             if v:IsA("Part") then
@@ -56,14 +56,14 @@ end)
 
 --//Options Tab Buttons\\--
 
-OptionsTabSection:NewKeybind("Toggle UI", "", Enum.KeyCode.F5, function()
+OptionsSection:NewKeybind("Toggle UI", "", Enum.KeyCode.F5, function()
 	Library:ToggleUI()
 end)
 
-OptionsTabSection:NewSlider("Set Walkspeed", "Set your player walkspeed. 16 default", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+OptionsSection:NewSlider("Set Walkspeed", "Set your player walkspeed. 16 default", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
-OptionsTabSection:NewSlider("Set Jump Power", "Set your player Jump Power. 50 default", 100, 0, function(s) -- 100 (MaxValue) | 0 (MinValue)
+OptionsSection:NewSlider("Set Jump Power", "Set your player Jump Power. 50 default", 100, 0, function(s) -- 100 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
