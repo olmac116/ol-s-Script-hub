@@ -1,6 +1,7 @@
 --Created and developed by olmac16 (olmac16#0947)
 
 warn("Created and Developed by olmac16 [olmac16#0947]")
+warn("PRESS F5 TO TOGGLE UI. YOU CAN CHANGE THIS IN SETTINGS")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("ol's Hub", "GrapeTheme")
@@ -33,18 +34,7 @@ MainTabSection:NewButton("Launch Infinite Yield", "Launch Infinite Yield Admin",
     print("Infinite Yield Admin Loaded successfully!")
 end)
 
-MainTabSection:NewButton("Set game invisible", "Best for multiple accounts", function()
-    warn("LEAVE AND REJOIN TO UNDO INVIS MAP")
-    for i, v in pairs(game.Workspace:GetDescendants()) do
-        if v:IsA("Part") then
-            v.Transparency = 1
-            v.Texture.Visible = false
-            v.Decal.Visible = false
-        end
-    end
-end)
-
-MainTabSection:NewToggle("ToggleText", "ToggleInfo", function(state)
+MainTabSection:NewToggle("Invisible map", "Best for multiple account launch", function(state)
     if state then
         for i, v in pairs(game.Workspace:GetDescendants()) do
             if v:IsA("Part") then
